@@ -14,3 +14,5 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
 }
+
+defaultTasks 'test'
