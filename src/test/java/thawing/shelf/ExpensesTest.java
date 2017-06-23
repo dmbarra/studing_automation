@@ -26,6 +26,9 @@ public class ExpensesTest extends BaseSetupTest {
         loginPage.openNewUserForm();
         key = userRegisterPage.createNewUserSuccess();
         mainPage.openManagerUser();
+        managerUserPage.updateUserPassword(key, "newPassword");
+        mainPage.logout();
+        loginPage.loginSuccessUser(key, "newPassword");
         assertThat(mainPage.getAccountUserName(), is(key));
     }
 

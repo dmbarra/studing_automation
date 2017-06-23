@@ -8,6 +8,7 @@ import thawing.shelf.pages.AddExpensePage;
 import thawing.shelf.pages.CategoryListPage;
 import thawing.shelf.pages.LoginPage;
 import thawing.shelf.pages.MainPage;
+import thawing.shelf.pages.ManagerUserPage;
 import thawing.shelf.pages.UserRegisterPage;
 
 import java.net.MalformedURLException;
@@ -21,6 +22,7 @@ public class BaseSetupTest {
     protected MainPage mainPage;
     protected CategoryListPage categoryListPage;
     protected AddExpensePage addExpensePage;
+    protected ManagerUserPage managerUserPage;
 
     protected String key;
     protected String category;
@@ -34,6 +36,7 @@ public class BaseSetupTest {
         mainPage = PageFactory.initElements(driver, MainPage.class);
         categoryListPage = PageFactory.initElements(driver, CategoryListPage.class);
         addExpensePage = PageFactory.initElements(driver, AddExpensePage.class);
+        managerUserPage = PageFactory.initElements(driver, ManagerUserPage.class);
         driver.get("http://thawing-shelf-73260.herokuapp.com/");
     }
 

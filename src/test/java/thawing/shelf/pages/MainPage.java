@@ -23,6 +23,9 @@ public class MainPage {
     @FindBy(id = "editaccount")
     private WebElement menuEditAccount;
 
+    @FindBy(id = "logout")
+    private WebElement menuLogout;
+
     public void openCategories(){
         menuListCategories.click();
     }
@@ -37,5 +40,9 @@ public class MainPage {
 
     public void openManagerUser() {
         menuEditAccount.click();
+    }
+
+    public void logout() {
+        menuLogout.click();
     }
 }
