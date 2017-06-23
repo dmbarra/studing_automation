@@ -34,4 +34,8 @@ public class MainPage {
     public void addNewExpense() {
         menuAddNewExpense.click();
     }
+
+    public void openManagerUser() {
+        menuEditAccount.click();
+    }
 }
