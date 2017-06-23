@@ -17,6 +17,9 @@ public class LoginPage {
     @FindBy(linkText = "Register new user")
     private WebElement newUserLink;
 
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    private WebElement alertMessage;
+
     public void loginSuccessUser(String user, String password){
         userBox.sendKeys(user);
         passwordBox.sendKeys(password);
@@ -27,4 +30,7 @@ public class LoginPage {
         newUserLink.click();
     }
 
+    public boolean isMessagePresent(){
+        return alertMessage.isDisplayed();
+    }
 }

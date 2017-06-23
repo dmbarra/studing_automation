@@ -27,7 +27,7 @@ public class UserRegisterPage {
     }
 
     public String createNewUserSuccess(){
-        String uuid = UUID.randomUUID().toString().replaceAll("-", "").substring(6);
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "").substring(1, 6);
         createNewUserSuccess(uuid, uuid);
         return uuid;
     }
