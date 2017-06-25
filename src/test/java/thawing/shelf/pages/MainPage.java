@@ -26,11 +26,11 @@ public class MainPage {
     @FindBy(id = "logout")
     private WebElement menuLogout;
 
-    public void openCategories(){
+    public void openCategories() {
         menuListCategories.click();
     }
 
-    public String getAccountUserName(){
+    public String getAccountUserName() {
         return menuEditAccount.getText();
     }
 

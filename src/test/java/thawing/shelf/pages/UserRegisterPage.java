@@ -19,14 +19,14 @@ public class UserRegisterPage {
     @FindBy(id = "submit")
     private WebElement submitButton;
 
-    public void createNewUserSuccess(String user, String password){
+    public void createNewUserSuccess(String user, String password) {
         userBox.sendKeys(user);
         password1Box.sendKeys(password);
         password2Box.sendKeys(password);
         submitButton.click();
     }
 
-    public String createNewUserSuccess(){
+    public String createNewUserSuccess() {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "").substring(1, 6);
         createNewUserSuccess(uuid, uuid);
         return uuid;

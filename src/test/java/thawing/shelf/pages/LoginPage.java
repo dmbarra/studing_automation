@@ -20,17 +20,17 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='alert alert-danger']")
     private WebElement alertMessage;
 
-    public void loginSuccessUser(String user, String password){
+    public void loginSuccessUser(String user, String password) {
         userBox.sendKeys(user);
         passwordBox.sendKeys(password);
         submitButton.click();
     }
 
-    public void openNewUserForm(){
+    public void openNewUserForm() {
         newUserLink.click();
     }
 
-    public boolean isMessagePresent(){
+    public boolean isMessagePresent() {
         return alertMessage.isDisplayed();
     }
 }

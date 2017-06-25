@@ -20,7 +20,7 @@ public class CategoryListPage {
     @FindBy(css = "tbody tr")
     private WebElement tableCategory;
 
-    public String createNewCategory(){
+    public String createNewCategory() {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "").substring(1, 6);
         linkNewCategory.click();
         fieldName.sendKeys(uuid);
@@ -28,7 +28,8 @@ public class CategoryListPage {
         return uuid;
     }
 
-    public boolean isElementOnTable(String element){
-        return !tableCategory.findElements(By.xpath("//td[contains(text(),'" + element + "')]")).isEmpty();
+    public boolean isElementOnTable(String element) {
+        return !tableCategory.findElements(
+                By.xpath("//td[contains(text(),'" + element + "')]")).isEmpty();
     }
 }

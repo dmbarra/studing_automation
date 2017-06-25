@@ -9,7 +9,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ExpensesTest extends BaseSetupTest {
 
     @Test
-    public void shouldCreateNewCategory(){
+    public void shouldCreateNewCategory() {
         loginPage.openNewUserForm();
         key = userRegisterPage.createNewUserSuccess();
         mainPage.openCategories();
@@ -18,7 +18,7 @@ public class ExpensesTest extends BaseSetupTest {
     }
 
     @Test
-    public void shouldCreateNewExpense(){
+    public void shouldCreateNewExpense() {
         loginPage.openNewUserForm();
         key = userRegisterPage.createNewUserSuccess();
         mainPage.openCategories();

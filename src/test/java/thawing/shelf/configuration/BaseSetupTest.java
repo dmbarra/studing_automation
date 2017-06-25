@@ -41,7 +41,7 @@ public class BaseSetupTest {
     }
 
     @After
-    public void before(){
+    public void before() {
         driver.close();
         driver.quit();
     }

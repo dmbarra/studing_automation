@@ -30,7 +30,7 @@ public class AddExpensePage {
     @FindBy(css = "tbody tr")
     private WebElement tableCategory;
 
-    public void createNewExpenseSuccess(){
+    public void createNewExpenseSuccess() {
         dayBox.clear();
         dayBox.sendKeys("25");
         mounthBox.clear();
@@ -46,7 +46,8 @@ public class AddExpensePage {
         submitButton.click();
     }
 
-    public boolean isElementOnTable(String element){
-        return !tableCategory.findElements(By.xpath("//td[contains(text(),'" + element + "')]")).isEmpty();
+    public boolean isElementOnTable(String element) {
+        return !tableCategory.findElements(
+                By.xpath("//td[contains(text(),'" + element + "')]")).isEmpty();
     }
 }

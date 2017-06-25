@@ -2,6 +2,7 @@ group 'automation-test'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'checkstyle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -15,4 +16,5 @@ dependencies {
     testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
 }
 
-defaultTasks 'test'
+defaultTasks 'clean', 'test', 'build'
+
