@@ -9,9 +9,17 @@ import java.net.URL;
 
 public class RemoteDriverSelenium {
 
-    private static final String USERNAME = "";
-    private static final String AUTOMATE_KEY = "";
-    private static final String BROWSER_STACK = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+    private String username;
+    private String automateKey;
+    private String browserStack;
+
+
+    public RemoteDriverSelenium() {
+        username = System.getenv("USERNAME_BROWSER_STACK");
+        automateKey = System.getenv("KEY_BROWSER_STACK");
+        browserStack = "https://" + username + ":" + automateKey + "@hub-cloud.browserstack.com/wd/hub";
+    }
+
 
     public WebDriver connectBrowserStack() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -19,6 +27,6 @@ public class RemoteDriverSelenium {
         caps.setCapability("browserstack.debug", "true");
         caps.setCapability("build", "First build");
 
-        return new RemoteWebDriver(new URL(BROWSER_STACK), caps);
+        return new RemoteWebDriver(new URL(browserStack), caps);
     }
 }
